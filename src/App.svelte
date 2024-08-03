@@ -1,5 +1,6 @@
 <script>
   import QuestionSystem from "./lib/QuestionSystem.svelte";
+  import VolumeControl from "./lib/VolumeControl.svelte";
   import { store, loadData } from "./assets/store.js";
   import { onMount } from "svelte";
   import { fade } from "svelte/transition";
@@ -83,6 +84,7 @@
           <div
             class="flex flex-col flex-wrap h-screen justify-end bg-none"
             transition:fade>
+            <VolumeControl {musicBg} />
             <QuestionSystem dataExt="{data}" />
           </div>
         {/if}
